@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Example {
 
-    private final String title;
+    private final String bookTitle;
     private final String authorName;
     private final int pageCount;
     private final String[] mainCharacters;
@@ -14,19 +14,19 @@ public class Example {
 
     @JsonCreator
 
-    public Example(@JsonProperty("title") String title,
+    public Example(@JsonProperty("bookTitle") String bookTitle,
                    @JsonProperty("authorName") String authorName,
                    @JsonProperty("pageCount") int pageCount,
                    @JsonProperty("chapters") String[] mainCharacters) {
-        this.title = title;
+        this.bookTitle = bookTitle;
         this.authorName = authorName;
         this.pageCount = pageCount;
         this.mainCharacters = mainCharacters;
 
     }
 
-    public String getTitle(){
-        return title;
+    public String getBookTitle(){
+        return bookTitle;
     }
 
 
